@@ -9,5 +9,29 @@ class Song
   def save
     self.class.all << self
   end
-
+ 
+  def self.create
+    song = Song.new 
+    song.save
+    song
+  end
+  
+  def self.new_by_name(name)
+    song = Song.new
+    song.name = name
+    song.save
+    song
+  end
+  
+  def self.create_by_name(name)
+    song = Song.new 
+    song.name = name 
+    song.save
+    song
+  end
+  
+  def self.find_by_name(song_name)
+      hold = Song.all.select{|song| song.name == song_name}
+      hold[0]
+  end
 end
