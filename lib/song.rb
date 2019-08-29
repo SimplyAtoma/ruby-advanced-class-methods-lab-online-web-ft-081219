@@ -53,7 +53,7 @@ class Song
     
     split_file = song_file.split("-")
     split_again = split_file[1].split(".")
-    song = Song.create_by_name(split_again[0])
+    song = Song.create_by_name(split_again[0].strip)
     @artist_name = split_file[0]
     song
   end
