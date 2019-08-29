@@ -44,8 +44,11 @@ class Song
   end
   
   def self.alphabetical
+    name_hold = []
     Song.all.each{|song|
-      Song.all.name.sort
+      name_hold << Song.all.name
     }
+    name_hold.sort 
+    name_hold
   end
 end
