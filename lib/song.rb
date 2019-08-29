@@ -50,5 +50,6 @@ class Song
     }
     name_hold.sort 
     name_hold
+    Song.all
   end
 end
