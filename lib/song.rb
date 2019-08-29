@@ -34,4 +34,8 @@ class Song
       hold = Song.all.select{|song| song.name == song_name}
       hold[0]
   end
+  
+  def self.find_or_create_by_name
+    
+  end
 end
